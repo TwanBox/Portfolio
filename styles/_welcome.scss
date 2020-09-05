@@ -75,19 +75,23 @@ nav {
 
     .btn {
         cursor: pointer;
+        
+        &:hover {
+            color: chartreuse;
+        }
     }
 
     .contact {
-        background-color: chartreuse;
         padding: 1rem;
         border-radius: 2rem;
-        color: #272727;
+        box-sizing: border-box;
+        background-color: transparent;
+        border: 1px chartreuse solid;
+        color: chartreuse;
 
         &:hover {
-            box-sizing: border-box;
-            background-color: transparent;
-            border: 1px chartreuse solid;
-            color: chartreuse;
+            color: #272727;
+            background-color: chartreuse;
         }
     }
 }

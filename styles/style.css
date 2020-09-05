@@ -12,6 +12,7 @@ html {
 body {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -150,18 +151,110 @@ nav .btn {
   cursor: pointer;
 }
 
-nav .contact {
-  background-color: chartreuse;
-  padding: 1rem;
-  border-radius: 2rem;
-  color: #272727;
+nav .btn:hover {
+  color: chartreuse;
 }
 
-nav .contact:hover {
+nav .contact {
+  padding: 1rem;
+  border-radius: 2rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: transparent;
   border: 1px chartreuse solid;
+  color: chartreuse;
+}
+
+nav .contact:hover {
+  color: #272727;
+  background-color: chartreuse;
+}
+
+.projects-wrapper {
+  background: #323232;
+}
+
+.projects {
+  min-height: 90vh;
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.projects .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+}
+
+.projects .cards h4 {
+  margin: 3rem 1rem;
+}
+
+.projects .cards h5 {
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.card-section {
+  margin: 20px auto;
+  -webkit-box-shadow: 0 5px 12px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 12px 2px rgba(0, 0, 0, 0.2);
+  width: 80%;
+}
+
+.card-section img {
+  width: 100%;
+  height: 200px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px));
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px));
+}
+
+.card-body {
+  padding: 0 15px 20px 15px;
+}
+
+.card-body h4 {
+  margin: 0px;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+  color: chartreuse;
+}
+
+.card-body .border-line {
+  border-bottom: 1px solid chartreuse;
+  border-width: 3px;
+  width: 75px;
+  margin: 10px 0px;
+}
+
+.card-body .card-text {
+  color: gray;
+  letter-spacing: 0.5px;
+}
+
+.card-body .btn {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: #bdbdbd;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.card-body .btn:hover {
   color: chartreuse;
 }
 /*# sourceMappingURL=style.css.map */
