@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -12,7 +13,6 @@ html {
 body {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
-  scroll-behavior: smooth;
 }
 
 h1 {
@@ -189,6 +189,11 @@ nav .contact:hover {
       justify-content: space-around;
 }
 
+.projects .projects-header {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
 .projects .cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,7 +214,7 @@ nav .contact:hover {
 }
 
 .card-section {
-  margin: 20px auto;
+  margin: 2rem auto;
   -webkit-box-shadow: 0 5px 12px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 12px 2px rgba(0, 0, 0, 0.2);
   width: 80%;
@@ -256,5 +261,92 @@ nav .contact:hover {
 
 .card-body .btn:hover {
   color: chartreuse;
+}
+
+.about-wrapper {
+  background: #323232;
+}
+
+.about-curve {
+  background-color: #272727;
+}
+
+.about-curve .upper {
+  background-color: #323232;
+}
+
+.about-curve svg {
+  display: block;
+}
+
+.about {
+  min-height: 90vh;
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.about-header {
+  margin: 0 0 70px 0;
+}
+
+.about-text {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contact-wrapper {
+  background: #323232;
+}
+
+.contact {
+  min-height: 100%;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.contact-info {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.border-underline {
+  border-bottom: 1px solid chartreuse;
+  border-width: 3px;
+  width: 21rem;
+  margin-bottom: 25px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: chartreuse;
+  background-color: #272727;
+}
+
+.footer-link {
+  color: chartreuse;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  border: 1px solid chartreuse;
 }
 /*# sourceMappingURL=style.css.map */

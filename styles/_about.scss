@@ -1,0 +1,35 @@
+.about-wrapper {
+    background: #323232;
+}
+
+.about-curve {
+    background-color: #272727;
+
+    .upper {
+        background-color: #323232;
+    }
+
+    svg {
+        display: block;
+    }
+}
+
+.about {
+    min-height: 90vh;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-header {
+    margin: 0 0 70px 0;
+}
+
+.about-text {
+    width: 80%;
+    margin: 0 auto;
+}
