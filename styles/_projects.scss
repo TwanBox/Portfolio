@@ -5,76 +5,70 @@
 .projects {
     min-height: 90vh;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 
     .projects-header {
         text-align: center;
-        margin: 1.5rem 0;
-    }
-
-    .cards {
-        display: flex;
-        justify-content: space-between;
-        color: white;
-
-        h4 {
-            margin: 3rem 1rem;
-        }
-        h5 {
-            padding: 2rem;
-            font-size: 1.5rem;
-        }
     }
 }
 
-.card-section {
-    margin: 2rem auto;
-    box-shadow: 0 5px 12px 2px rgba(0, 0, 0, 0.2);
-    width: 80%;
-
-    img {
-        width: 100%;
-        height: 200px;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px));
-    }
-}
-
-.card-body {
-    padding: 0 15px 20px 15px;
-
-    h4 {
-        margin: 0px;
-        font-weight: bold;
-        font-family: sans-serif;
-        letter-spacing: 0.5px;
-        color: chartreuse;
-    }
-
-    .border-line{
-        border-bottom:1px solid chartreuse;
-        border-width:3px;
-        width: 75px;  
-        margin:10px 0px;
-    }
+.projects-innerWrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
     
-    .card-text{
-    color:gray;  
-    letter-spacing: 0.5px;
-    }
-
-    .btn {
-        font-size: 1.5rem;
-        margin-right: 1rem;
-        color: rgb(189, 189, 189);
-        cursor: pointer;
-        font-weight: 900;
-
-        &:hover {
-            color: chartreuse;
-        }
-    }
 }
 
+
+.cardBox {
+    perspective: 500px;
+    margin:15px;
+}
+
+.projects-card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transition: .5s ease;
+    box-shadow: 0 30px 30px rgba(0,0,0,.5);
+  }
+  
+  .card-color {
+    background: #272727;
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    color: chartreuse;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-back {
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transform: rotateY(180deg);
+  }
+  
+  .cardBox:hover .projects-card {
+    transform: rotateY(180deg);
+  }

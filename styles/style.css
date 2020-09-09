@@ -177,7 +177,7 @@ nav .contact:hover {
 .projects {
   min-height: 90vh;
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,76 +191,87 @@ nav .contact:hover {
 
 .projects .projects-header {
   text-align: center;
-  margin: 1.5rem 0;
 }
 
-.projects .cards {
+.projects-innerWrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: monospace;
 }
 
-.projects .cards h4 {
-  margin: 3rem 1rem;
+.cardBox {
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  margin: 15px;
 }
 
-.projects .cards h5 {
-  padding: 2rem;
-  font-size: 1.5rem;
+.projects-card {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  -webkit-box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
 }
 
-.card-section {
-  margin: 2rem auto;
-  -webkit-box-shadow: 0 5px 12px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 12px 2px rgba(0, 0, 0, 0.2);
-  width: 80%;
+.card-color {
+  background: #272727;
 }
 
-.card-section img {
-  width: 100%;
-  height: 200px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px));
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px));
-}
-
-.card-body {
-  padding: 0 15px 20px 15px;
-}
-
-.card-body h4 {
-  margin: 0px;
-  font-weight: bold;
-  font-family: sans-serif;
-  letter-spacing: 0.5px;
+.card-front, .card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
   color: chartreuse;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
-.card-body .border-line {
-  border-bottom: 1px solid chartreuse;
-  border-width: 3px;
-  width: 75px;
-  margin: 10px 0px;
+.card-front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.card-body .card-text {
-  color: gray;
-  letter-spacing: 0.5px;
+.card-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
-.card-body .btn {
-  font-size: 1.5rem;
-  margin-right: 1rem;
-  color: #bdbdbd;
-  cursor: pointer;
-  font-weight: 900;
-}
-
-.card-body .btn:hover {
-  color: chartreuse;
+.cardBox:hover .projects-card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .about-wrapper {
